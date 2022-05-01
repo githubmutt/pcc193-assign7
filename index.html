@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #7 Drawing Lines</title>
+</head>
+
+
+<script src="script.js"></script>
+<script>
+
+
+onload = function (){
+
+    canvas = document.getElementById("myCanvas")
+
+    ctx = canvas.getContext("2d")
+
+    canvas.addEventListener("mousemove", handleMouseMove,false)
+    canvas.addEventListener("mousedown", handleMousePressed)
+    canvas.addEventListener("mouseup", handleMouseReleased)
+
+    document.getElementById("clearButton").addEventListener("click",clearSignature)
+
+}
+
+</script>
+
+<body>
+    
+    <p>
+        Signature Pad
+    </p>
+
+    <canvas id="myCanvas" style="border: 2px solid blue;" width="400" height="400"></canvas>
+    <br>
+    <button id="clearButton" style= "height:30px; width:400px">Clear Canvas </button>
+
+
+</body>
+</html>
+
+
+
+
